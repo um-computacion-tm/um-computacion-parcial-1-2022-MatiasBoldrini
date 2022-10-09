@@ -2,9 +2,7 @@ import unittest
 from unittest.mock import patch
 from parameterized import parameterized
 
-from hangman import Hangman
-from invalidassignmentexception import InvalidAssignmentException
-
+from .hangman import *
 
 class TestHangman(unittest.TestCase):
 
@@ -70,7 +68,7 @@ class TestHangman(unittest.TestCase):
             hangman.assign(letter)
         self.assertTrue(hangman.winner())
 
-    @patch('builtins.input', side_effect=['j', 'a', 'e', 'h', 'r'])
+    @patch('builtins.input', side_effect=['j', 'a', 'r', 'h', 'e'])
     def test_play_win(self, mock_inputs):
         hangman = Hangman()
         hangman.set_word('jarra')
