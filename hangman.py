@@ -1,4 +1,4 @@
-from .invalidassignmentexception import InvalidAssignmentException
+from invalidassignmentexception import InvalidAssignmentException
 
 
 class Hangman():
